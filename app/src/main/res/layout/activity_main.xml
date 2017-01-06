@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.administrator.designtest.MainActivity">
+
+    <Button
+        android:id="@+id/tabLayout"
+        android:onClick="designClick"
+        android:layout_width="0dp"
+        app:layout_widthPercent="45%"
+        app:layout_heightPercent="10%"
+        android:layout_height="0dp"
+        android:text="TabLayout使用"/>
+    <Button
+        android:layout_below="@+id/tabLayout"
+        app:layout_marginTopPercent="2%"
+        android:id="@+id/navigation"
+        android:onClick="designClick"
+        android:layout_width="0dp"
+        app:layout_widthPercent="45%"
+        app:layout_heightPercent="10%"
+        android:layout_height="0dp"
+        android:text="Navigation使用"/>
+    <Button
+        android:layout_below="@+id/navigation"
+        app:layout_marginTopPercent="2%"
+        android:id="@+id/collasping"
+        android:onClick="designClick"
+        android:layout_width="wrap_content"
+        app:layout_heightPercent="10%"
+        android:layout_height="0dp"
+        android:text="CollaspingLayout使用"/>
+    <Button
+        android:layout_below="@+id/collasping"
+        app:layout_marginTopPercent="2%"
+        android:id="@+id/design_bottom_sheet"
+        android:onClick="designClick"
+        android:layout_width="wrap_content"
+        app:layout_heightPercent="10%"
+        android:layout_height="0dp"
+        android:text="BottomSheet使用"/>
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_below="@+id/design_bottom_sheet"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/bottom_sheet"
+            android:orientation="vertical"
+            android:background="#e8e8e8"
+            app:behavior_peekHeight="0dp"
+            app:behavior_hideable="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_behavior="@string/bottom_sheet_behavior">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingaction"
+            android:onClick="designClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:elevation="3dp"
+            app:rippleColor="@color/colorAccent"
+            app:layout_anchor="@id/bottom_sheet"
+            app:layout_anchorGravity="right|top"
+            app:borderWidth="0dp"
+            android:backgroundTint="@color/colorPrimary"
+            app:pressedTranslationZ="6dp"
+            android:layout_margin="10dp"
+            android:src="@mipmap/ic_launcher"
+            />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</android.support.percent.PercentRelativeLayout>

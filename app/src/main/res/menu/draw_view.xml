@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/center_image_collection"
+            android:title="Home"/>
+        <item
+            android:id="@+id/nav_messages"
+            android:icon="@drawable/center_message"
+            android:title="Messages"/>
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/center_reading_collection"
+            android:title="Friends"/>
+        <item
+            android:id="@+id/nav_discussion"
+            android:icon="@drawable/center_night_mode"
+            android:title="Discussion"/>
+    </group>
+    <item android:title="Sub items">
+        <menu>
+            <item
+                android:id="@+id/sub1"
+                android:icon="@drawable/center_setting"
+                android:title="Sub item 1"
+                />
+            <item
+                android:id="@+id/sub2"
+                android:icon="@drawable/center_movie_collection"
+                android:title="Sub item 2"
+                />
+        </menu>
+    </item>
+</menu>
